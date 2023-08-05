@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Charm&family=Pacifico&family=Prompt:wght@100&family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Faustina&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+        <title>Temperature converter</title>
+        
+    </head>
+    <style>
+        body {
+    font-family: sans-serif;
+    width:100%;
+	background-size:cover;
+    background-image:linear-gradient(rgba(0,0,0.2,0.3),rgba(0,0,0.3,0.1)),url(../internships/images/temp4.jpg);
+
+    }
+       
+         .content 
+         {  
+            border:2px solid white;
+            width:30%;
+            height: 40vh;   
+           text-align: center;
+           margin-left: 325px;
+           margin-top: 30px;    
+         }
+         .content button{
+         margin-right:27px
+         }
+         .head
+         {
+        
+            margin-left: 330px;
+           margin-top: 140px;   
+           color:blanchedalmond;
+         }
+         .content label{
+            color:bisque;
+         }
+         
+    </style>
+    <body>
+
+        <h1 class="head">Temperature converter</h1>
+        <div class="content">
+        
+            <br>
+            <label>Enter Celsius Degree:</label>
+            <br>
+            <input type="text" id="celsius" name="celsius">
+            <br>
+            <br>
+           <label>Fahrenheit</label>
+            <br>
+            <input type="text" id="display" name="solution">
+            <br>
+                <br>
+            <button  onclick="show_result()">calculate</button>
+             <button onclick="clear()">clear</button>
+            
+    </div>
+    <script>
+      function show_result()
+	 {
+	
+	 let c = parseInt(document.getElementById("celsius").value);
+	
+	 f=parseFloat(c)*(9/5)+32;
+	 document.getElementById("display").value=f;
+
+	 }
+
+     function clear()
+    {
+     document.getElementById("display").value=' ';
+    }
+
+
+    </script>
+
+    </body>
+    </html>
